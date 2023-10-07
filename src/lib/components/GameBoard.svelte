@@ -21,7 +21,7 @@
 </script>
 
 <div
-	transition:fade={{ delay: 1000, duration: 2500 }}
+	transition:fade={{ delay: 500, duration: 1000 }}
 	class="min-h-screen flex justify-center items-center"
 >
 	<div
@@ -33,7 +33,13 @@
 		{#each board as row, r}
 			{#each row as piece, c}
 				{#if piece === 'f' || piece === 'mouse' || piece === 'cat'}
-					<Tile value={[r, c]} tileType={'f'} />
+					{#if piece === 'cat'}
+						<Tile value={[r, c]} tileType={'f'} piece={'cat'} />
+					{:else if piece === 'mouse'}
+						<Tile value={[r, c]} tileType={'f'} piece={'mouse'} />
+					{:else}
+						<Tile value={[r, c]} tileType={'f'} />
+					{/if}
 				{:else if piece === 'w' && r % 2 !== 0 && c % 2 === 0}
 					<Tile value={[r, c]} tileType={'w'} orientation={'h'} />
 				{:else if piece === 'w' && r % 2 === 0 && c % 2 !== 0}
