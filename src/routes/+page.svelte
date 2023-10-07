@@ -7,5 +7,6 @@
 {#if !$gameInfo.gameStarted}
 	<PlayerInfoForm />
 {:else}
+	<h1>The game has started</h1>
 	<GameBoard />
 {/if}
