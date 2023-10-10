@@ -3,11 +3,16 @@
 	import { fade } from 'svelte/transition';
 	import Tile from './Tile.svelte';
 
+	import { Sound } from 'svelte-sound';
+	import gameEndSound from '$lib/assets/mixkit-game-bonus-reached-2065.wav';
+
+	const endSound = new Sound(gameEndSound);
 	function stopGame() {
 		gameInfo.update((state) => {
 			return { ...state, gameStarted: false };
 		});
-		console.log(gameInfo);
+		// console.log(gameInfo);
+		endSound.play();
 	}
 
 	function movePiece(initialCoordinates, newCoordinates) {
@@ -42,6 +47,7 @@
 		});
 	}
 	// setInterval(testRat, 1000);
+
 	// setInterval(testMovement, 3000);
 </script>
 

@@ -4,9 +4,6 @@
 	import GameBoard from '../lib/components/GameBoard.svelte';
 </script>
 
-<h1>
-	{$gameInfo}
-</h1>
 {#if !$gameInfo.gameStarted}
 	<PlayerInfoForm />
 {:else}
