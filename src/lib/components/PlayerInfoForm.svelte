@@ -6,12 +6,17 @@
 
 	const handleSubmitForm = () => {
 		// console.log(player1, player2);
-		gameInfo.set({ player1: player1, player2: player2, gameStarted: true });
+		gameInfo.update((gameState) => {
+			gameState.player1 = player1;
+			gameState.player2 = player2;
+			gameState.gameStarted = true;
+			return gameState;
+		});
 	};
 </script>
 
 <div
-	transition:fade={{ delay: 250, duration: 300 }}
+	transition:fade={{ delay: 1000, duration: 2500 }}
 	class="flex flex-col gap-12 text-xl justify-center items-center text-center min-h-screen"
 >
 	<div class="flex flex-col gap-4">

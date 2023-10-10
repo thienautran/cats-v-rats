@@ -4,6 +4,7 @@
 	// can be v virtical, or h horizontal
 	export let orientation;
 	export let piece; // can have cat or mouse
+	export let value;
 </script>
 
 {#if tileType === 'f'}
@@ -16,7 +17,7 @@
 		{#if piece === 'cat'}
 			<div class="bg-red-600 h-[75%] w-[75%]">cat</div>
 		{:else if piece === 'mouse'}
-			<div class="bg-blue-600 h-[75%] w-[75%]">rat</div>
+			<div class="bg-orange-600 h-[75%] w-[75%]">rat</div>
 		{/if}
 	</div>
 {:else if tileType === 'w' && orientation === 'v'}
