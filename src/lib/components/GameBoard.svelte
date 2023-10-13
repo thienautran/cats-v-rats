@@ -6,7 +6,11 @@
 	import { Sound } from 'svelte-sound';
 	import gameEndSound from '$lib/assets/mixkit-game-bonus-reached-2065.wav';
 
+	import gameBackground from '$lib/assets/game/background.svg';
+
 	const endSound = new Sound(gameEndSound);
+	const background = `<svg>gameBackground<svg>`;
+
 	function stopGame() {
 		gameInfo.update((state) => {
 			return { ...state, gameStarted: false };
@@ -53,35 +57,42 @@
 
 <div
 	transition:fade={{ delay: 500, duration: 1000 }}
-	class="min-h-screen min-w-full flex flex-col space-y-10 justify-center items-center"
+	class="min-h-screen flex flex-col justify-center items-center w-full"
 >
-	<div
-		tabindex="0"
-		role="gameboard"
-		aria-label="game board"
-		class="h-vw-5 w-vw-5 bg-black flex flex-row justify-center items-center flex-wrap"
-	>
-		{#each $gameInfo.gameBoard as row, r}
-			{#each row as piece, c}
-				{#if piece === 'f' || piece === 'mouse' || piece === 'cat'}
-					{#if piece === 'cat'}
-						<Tile value={[r, c]} tileType={'f'} piece={'cat'} orientation={'none'} />
-					{:else if piece === 'mouse'}
-						<Tile value={[r, c]} tileType={'f'} piece={'mouse'} orientation={'none'} />
+	<div class="w-full md:w-1/3 p-3">
+		<div
+			tabindex="0"
+			role="gameboard"
+			aria-label="game board"
+			class="w-full h-full flex flex-row justify-center items-center flex-wrap relative"
+		>
+			{#each $gameInfo.gameBoard as row, r}
+				{#each row as piece, c}
+					{#if piece === 'f' || piece === 'mouse' || piece === 'cat'}
+						{#if piece === 'cat'}
+							<Tile value={[r, c]} tileType={'f'} piece={'cat'} orientation={'none'} />
+						{:else if piece === 'mouse'}
+							<Tile value={[r, c]} tileType={'f'} piece={'mouse'} orientation={'none'} />
+						{:else}
+							<Tile value={[r, c]} tileType={'f'} piece={'none'} orientation={'none'} />
+						{/if}
+					{:else if piece === 'w' && r % 2 !== 0 && c % 2 === 0}
+						<Tile value={[r, c]} tileType={'w'} orientation={'h'} piece={'none'} />
+					{:else if piece === 'w' && r % 2 === 0 && c % 2 !== 0}
+						<Tile value={[r, c]} tileType={'w'} orientation={'v'} piece={'none'} />
 					{:else}
-						<Tile value={[r, c]} tileType={'f'} piece={'none'} orientation={'none'} />
+						<Tile value={[r, c]} tileType={'n'} piece={'none'} orientation={'none'} />
 					{/if}
-				{:else if piece === 'w' && r % 2 !== 0 && c % 2 === 0}
-					<Tile value={[r, c]} tileType={'w'} orientation={'h'} piece={'none'} />
-				{:else if piece === 'w' && r % 2 === 0 && c % 2 !== 0}
-					<Tile value={[r, c]} tileType={'w'} orientation={'v'} piece={'none'} />
-				{:else}
-					<Tile value={[r, c]} tileType={'n'} piece={'none'} orientation={'none'} />
-				{/if}
+				{/each}
 			{/each}
-		{/each}
+			<img
+				src={gameBackground}
+				class="w-full h-full absolute top-0 left-0 -z-10"
+				alt="game board"
+			/>
+		</div>
 	</div>
-	<button on:click={stopGame}>Stop game</button>
-	<button class="bg-red-600 px-2 py-2" on:click={testMovement}>move rat</button>
+	<button class="bg-red-600" on:click={stopGame}>Stop game</button>
+	<button class="bg-sky-600" on:click={testMovement}>move rat</button>
 	<h3>{$gameInfo.gameBoard[0][0]}</h3>
 </div>

@@ -1,4 +1,9 @@
 <script>
+	import fence from '$lib/assets/game/Walls/fence.svg';
+	import fencehorizontal from '$lib/assets/game/Walls/fencehorizontal.svg';
+	import wizard from '$lib/assets/game/Rats/wizard.svg';
+	import reaper from '$lib/assets/game/Rats/reaper.svg';
+
 	// provide the props of either "w", "f", or "n"
 	export let tileType;
 	// can be v virtical, or h horizontal
@@ -12,18 +17,26 @@
 		role="game tile"
 		aria-label="game tile"
 		tabindex="0"
-		class="bg-sky-900 h-[11.76%] w-[11.76%] flex justify-center items-center"
+		class="h-[11.76%] w-[11.76%] flex justify-center items-center"
 	>
 		{#if piece === 'cat'}
-			<div class="bg-red-600 h-[75%] w-[75%]">cat</div>
+			<div class="h-[75%] w-[75%]">
+				<img src={reaper} alt="cat" />
+			</div>
 		{:else if piece === 'mouse'}
-			<div class="bg-orange-600 h-[75%] w-[75%]">rat</div>
+			<div class="h-[75%] w-[75%]">
+				<img src={wizard} alt="wizard rat" />
+			</div>
 		{/if}
 	</div>
 {:else if tileType === 'w' && orientation === 'v'}
-	<div class="bg-green-500 h-[11.76%] w-[2.94%]" />
+	<div class=" h-[11.76%] w-[2.94%]">
+		<img src={fence} alt="fence wall tile" class="w-full m-0 p-0" />
+	</div>
 {:else if tileType === 'w' && orientation === 'h'}
-	<div class="bg-green-500 h-[2.94%] w-[11.76%]" />
+	<div class="h-[2.94%] w-[11.76%]">
+		<img src={fencehorizontal} alt="fence wall tile" class="w-full m-0 p-0" />
+	</div>
 {:else}
 	<div class="h-[2.94%] w-[2.94%]" />
 {/if}
