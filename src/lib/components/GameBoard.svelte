@@ -87,24 +87,22 @@
 			tabindex="0"
 			role="gameboard"
 			aria-label="game board"
-			class="w-full h-full flex flex-row justify-center items-center flex-wrap relative border-solid border-[#bd7e4a] border-8"
+			class="w-full h-full flex flex-row justify-center items-center flex-wrap relative border-solid border-[#bd7e4a] border-8 bg-black"
 		>
 			{#each $gameInfo.gameBoard as row, r}
 				{#each row as piece, c}
 					{#if piece === 'f' || piece === 'mouse' || piece === 'cat'}
 						{#if piece === 'cat'}
-							<Tile value={[r, c]} tileType={'f'} piece={'cat'} orientation={'none'} />
+							<Tile coordinates={[r, c]} tileType={'f'} piece={'cat'} />
 						{:else if piece === 'mouse'}
-							<Tile value={[r, c]} tileType={'f'} piece={'mouse'} orientation={'none'} />
+							<Tile coordinates={[r, c]} tileType={'f'} piece={'mouse'} />
 						{:else}
-							<Tile value={[r, c]} tileType={'f'} piece={'none'} orientation={'none'} />
+							<Tile coordinates={[r, c]} tileType={'f'} piece={'none'} />
 						{/if}
-					{:else if piece === 'w' && r % 2 !== 0 && c % 2 === 0}
-						<Tile value={[r, c]} tileType={'w'} orientation={'h'} piece={'none'} />
-					{:else if piece === 'w' && r % 2 === 0 && c % 2 !== 0}
-						<Tile value={[r, c]} tileType={'w'} orientation={'v'} piece={'none'} />
+					{:else if piece === 'w'}
+						<Tile coordinates={[r, c]} tileType={'w'} />
 					{:else}
-						<Tile value={[r, c]} tileType={'n'} piece={'none'} orientation={'none'} />
+						<Tile coordinates={[r, c]} tileType={'n'} />
 					{/if}
 				{/each}
 			{/each}
