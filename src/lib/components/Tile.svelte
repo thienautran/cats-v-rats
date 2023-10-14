@@ -1,7 +1,7 @@
 <script>
 	import fence from '$lib/assets/game/Walls/fence.svg';
 	import fencehorizontal from '$lib/assets/game/Walls/fencehorizontal.svg';
-	import wizard from '$lib/assets/game/Rats/wizard.svg';
+	import wizard from '$lib/assets/game/Rats/fighter.svg';
 	import reaper from '$lib/assets/game/Rats/reaper.svg';
 
 	// provide the props of either "w", "f", or "n"
@@ -20,11 +20,11 @@
 		class="h-[11.76%] w-[11.76%] flex justify-center items-center"
 	>
 		{#if piece === 'cat'}
-			<div class="h-[75%] w-[75%]">
+			<div class="h-[75%] w-[95%]">
 				<img src={reaper} alt="cat" />
 			</div>
 		{:else if piece === 'mouse'}
-			<div class="h-[75%] w-[75%]">
+			<div class="h-[75%] w-[95%]">
 				<img src={wizard} alt="wizard rat" />
 			</div>
 		{/if}
