@@ -6,8 +6,8 @@
 	import gif from '$lib/assets/rat-jam.gif';
 	const startSound = new Sound(gamesound);
 
-	let player1;
-	let player2;
+	let player1 = 'player 1';
+	let player2 = 'player 2';
 
 	const handleSubmitForm = () => {
 		// console.log(player1, player2);

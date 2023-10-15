@@ -1,7 +1,8 @@
 <script>
-	import fence from '$lib/assets/game/Walls/fence.svg';
-	import fencehorizontal from '$lib/assets/game/Walls/fencehorizontal.svg';
+	import stone from '$lib/assets/game/Walls/stone.svg';
+	import stonehorizontal from '$lib/assets/game/Walls/stonehorizontal.svg';
 	import wizard from '$lib/assets/game/Rats/fighter.svg';
+	import mountain from '$lib/assets/game/rock.svg';
 
 	import reaper from '$lib/assets/game/Rats/reaper.svg';
 
@@ -13,43 +14,38 @@
 
 {#if tileType === 'f'}
 	<div
-		role="game tile"
+		role="gridcell"
 		aria-label="game tile"
-		tabindex="0"
-		class="h-[11.76%] w-[11.76%] flex justify-center items-center"
+		class="flex justify-center items-center border-solid border-[#c28149] border-2"
 	>
 		{#if piece === 'cat'}
-			<div class="h-[75%] w-[95%]">
+			<div class="h-[75%] w-[75%]">
 				<img src={reaper} alt="cat" />
 			</div>
 		{:else if piece === 'mouse'}
-			<div class="h-[75%] w-[95%]">
-				<img src={wizard} alt="wizard rat" />
+			<div class="h-[75%] w-[75%] flex flex-col justify-center items-center">
+				<img src={wizard} alt="wizard rat" class="w-full" />
+			</div>
+		{:else if piece === 'mountain'}
+			<div class="h-[75%] w-[75%]">
+				<img src={mountain} alt="rock" class=" w-full" />
 			</div>
 		{/if}
 	</div>
 
-	<!-- horizontal not wall -->
-{:else if tileType === 'n' && coordinates[0] % 2 !== 0 && coordinates[1] % 2 === 0}
-	<div class="h-[2.94%] w-[11.76%]" />
-
-	<!-- nothing square -->
-{:else if tileType === 'n' && coordinates[0] % 2 !== 0 && coordinates[1] % 2 !== 0}
-	<div class="h-[2.94%] w-[2.94%]" />
-
-	<!-- virtical not wall -->
-{:else if tileType === 'n' && coordinates[0] % 2 === 0}
-	<div class="h-[11.76%] w-[2.94%]" />
+	<!-- empty tile -->
+{:else if tileType === 'n'}
+	<div class="empty" />
 
 	<!-- virtical wall -->
 {:else if tileType === 'w' && coordinates[0] % 2 === 0}
-	<div class="h-[11.76%] w-[2.94%]">
-		<img src={fence} alt="fence wall tile" class="h-full" />
+	<div class="flex justify-center items-center">
+		<img src={stone} alt="stone wall" class="h-full" />
 	</div>
 
 	<!-- horizontal wall -->
 {:else if tileType === 'w' && coordinates[0] % 2 !== 0}
-	<div class="h-[2.94%] w-[11.76%]">
-		<img src={fencehorizontal} alt="fence wall tile" class="w-full" />
+	<div class="flex justify-center items-center">
+		<img src={stonehorizontal} alt="stone wall" class="w-full" />
 	</div>
 {/if}

@@ -10,7 +10,7 @@
 	class="bg-white text-black flex flex-col justify-center items-center w-96 px-6 pb-4 pt-3 rounded-xl border-solid border-[#4b8ce7] border-8 gap-2"
 >
 	<div class="flex flex-col justify-center items-center bg-green-300 px-12 py-12 mb-2 rounded-xl">
-		<img src={wizard} alt="Ratticus Finch" class="lg:w-[250px]" />
+		<img src={wizard} alt="Ratticus Finch" class="lg:w-[200px]" />
 	</div>
 	<h2 class="text-3xl text-center">
 		Ratticus Finch <br />

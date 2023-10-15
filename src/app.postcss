@@ -3,6 +3,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.game {
+	display: grid;
+	grid-template-columns:
+		11.76% 2.94% 11.76% 2.94% 11.76% 2.94%
+		11.76% 2.94% 11.76% 2.94% 11.76% 2.94%
+		11.76%;
+	grid-template-rows:
+		11.76% 2.94% 11.76% 2.94% 11.76% 2.94%
+		11.76% 2.94% 11.76% 2.94% 11.76% 2.94%
+		11.76%;
+	gap: 0px; /* Optional: adjust the gap between grid items if needed */
+}
+
 body {
 	@apply bg-slate-700 text-white;
 }

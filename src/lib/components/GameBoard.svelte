@@ -2,6 +2,7 @@
 	import { source } from 'sveltekit-sse';
 
 	import { gameInfo } from '$lib/stores/GameInfoStore.js';
+
 	import { fade } from 'svelte/transition';
 	import Tile from './Tile.svelte';
 
@@ -9,6 +10,7 @@
 	import gameEndSound from '$lib/assets/mixkit-game-bonus-reached-2065.wav';
 
 	import gameBackground from '$lib/assets/game/background.svg';
+
 	import GameCharacterHintCard from '$lib/components/GameCharacterHintCard.svelte';
 
 	const endSound = new Sound(gameEndSound);
@@ -82,20 +84,22 @@
 >
 	<h1>Game: {$gameInfo.player1} vs {$gameInfo.player2}</h1>
 
-	<div class="w-[95%] md:w-1/3">
-		<div
-			tabindex="0"
-			role="gameboard"
-			aria-label="game board"
-			class="w-full h-full flex flex-row justify-center items-center flex-wrap relative border-solid border-[#bd7e4a] border-8 bg-black"
-		>
+	<div class="relative border-solid border-8 border-[#c28149] rounded-md bg-black">
+		<img
+			src={gameBackground}
+			alt="game board"
+			class="w-[350px] h-[350px] lg:h-[800px] lg:w-[800px] -z-10 absolute"
+		/>
+		<div role="grid" class="game h-[350px] w-[350px] lg:h-[800px] lg:w-[800px]">
 			{#each $gameInfo.gameBoard as row, r}
 				{#each row as piece, c}
-					{#if piece === 'f' || piece === 'mouse' || piece === 'cat'}
+					{#if piece === 'f' || piece === 'mouse' || piece === 'cat' || piece === 'mountain'}
 						{#if piece === 'cat'}
 							<Tile coordinates={[r, c]} tileType={'f'} piece={'cat'} />
 						{:else if piece === 'mouse'}
 							<Tile coordinates={[r, c]} tileType={'f'} piece={'mouse'} />
+						{:else if piece === 'mountain'}
+							<Tile coordinates={[r, c]} tileType={'f'} piece={'mountain'} />
 						{:else}
 							<Tile coordinates={[r, c]} tileType={'f'} piece={'none'} />
 						{/if}
@@ -106,11 +110,6 @@
 					{/if}
 				{/each}
 			{/each}
-			<img
-				src={gameBackground}
-				class="w-full h-full absolute top-0 left-0 -z-10"
-				alt="game board"
-			/>
 		</div>
 	</div>
 	<GameCharacterHintCard character={$gameInfo.characters[$gameInfo.currentActiveCharacter]} />
