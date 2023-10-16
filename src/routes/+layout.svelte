@@ -3,7 +3,7 @@
 </script>
 
 <nav>
-	<ul class="flex justify-center items-center space-x-2">
+	<ul class="flex justify-center items-center space-x-2 bg-green-600 lg:font-bold">
 		<li class="px-2 py-2 rounded-lg">
 			<a href="/">Game</a>
 		</li>

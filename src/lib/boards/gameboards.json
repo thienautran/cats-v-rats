@@ -1,79 +1,79 @@
 {
     "boards": [
         [
-            ["mouse", "n", "mountain", "n", "f", "n", "f", "n", "f", "n", "f", "n", "mouse"],
+            ["wizard", "n", "reaper", "n", "f", "n", "f", "n", "f", "n", "f", "n", "fighter"],
             ["n", "n", "n", "n", "n", "n", "w", "n", "w", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "w", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "w", "f", "n", "f", "n", "f", "w", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["f", "n", "f", "n", "f", "n", "cat", "n", "f", "w", "f", "n", "f"],
+            ["f", "n", "mountain", "n", "mountain", "n", "f", "n", "f", "w", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "w", "n", "n", "n", "n"],
-            ["f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f"],
+            ["f", "n", "mountain", "n", "mountain", "n", "f", "n", "f", "n", "reaper", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["f", "n", "f", "n", "f", "n", "f", "w", "f", "n", "f", "n", "f"],
+            ["f", "n", "f", "n", "f", "n", "f", "w", "f", "n", "mountain", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["mouse", "n", "f", "n", "f", "w", "f", "n", "f", "n", "f", "n", "mouse"]
+            ["mage", "n", "f", "n", "f", "w", "f", "n", "f", "n", "f", "n", "dancer"]
         ],
         [
-            ["mouse", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "mouse"],
+            ["fighter", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "mage"],
             ["n", "n", "n", "n", "n", "n", "w", "n", "n", "n", "n", "n", "n"],
             ["f", "w", "f", "n", "f", "w", "f", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "mountain", "n", "mountain", "n", "f"],
             ["n", "n", "w", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["f", "n", "f", "n", "f", "n", "cat", "n", "mountain", "n", "mountain", "n", "f"],
+            ["f", "n", "f", "n", "f", "n", "reaper", "n", "mountain", "n", "mountain", "n", "f"],
             ["w", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "mountain", "n", "f"],
             ["n", "n", "n", "n", "w", "n", "w", "n", "n", "n", "n", "n", "n"],
             ["f", "w", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["mouse", "n", "f", "n", "f", "n", "f", "w", "f", "n", "f", "n", "mouse"]
+            ["wizard", "n", "f", "n", "f", "n", "f", "w", "f", "n", "f", "n", "dancer"]
         ],
         [
-            ["mouse", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "mouse"],
+            ["dancer", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "wizard"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "w"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "mountain", "n", "f"],
             ["n", "n", "w", "n", "n", "n", "w", "n", "n", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["f", "n", "f", "n", "f", "w", "cat", "n", "f", "n", "f", "n", "f"],
+            ["f", "n", "f", "n", "f", "w", "reaper", "n", "f", "n", "f", "n", "f"],
             ["w", "n", "w", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "w", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "w", "n", "n", "n", "n", "n", "w"],
             ["f", "n", "mountain", "n", "mountain", "n", "f", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["mouse", "n", "mountain", "n", "mountain", "n", "f", "n", "f", "n", "f", "n", "mouse"]
+            ["fighter", "n", "mountain", "n", "mountain", "n", "f", "n", "f", "n", "f", "n", "mage"]
         ],
         [
-            ["mouse", "n", "f", "n", "mountain", "n", "f", "n", "f", "n", "f", "n", "mouse"],
+            ["mage", "n", "f", "n", "mountain", "n", "f", "n", "f", "n", "f", "n", "fighter"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "w"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "w", "f"],
             ["n", "n", "w", "n", "n", "n", "n", "n", "w", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "w", "f", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["f", "n", "f", "n", "f", "n", "cat", "n", "f", "n", "f", "n", "f"],
+            ["f", "n", "f", "n", "f", "n", "reaper", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
             ["f", "w", "f", "n", "f", "n", "mountain", "n", "mountain", "n", "f", "w", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "mountain", "n", "mountain", "n", "f", "w", "f"],
             ["n", "n", "n", "n", "w", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["mouse", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "mouse"]
+            ["dancer", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "wizard"]
         ],
         [
-            ["mouse", "n", "f", "n", "mountain", "n", "mountain", "n", "f", "n", "f", "n", "mouse"],
+            ["wizard", "n", "f", "n", "mountain", "n", "mountain", "n", "f", "n", "f", "n", "mage"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "w", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "mountain", "n", "mountain", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "w", "f"],
             ["n", "n", "n", "n", "w", "n", "n", "n", "n", "n", "w", "n", "n"],
-            ["f", "w", "f", "n", "f", "n", "cat", "n", "f", "n", "f", "n", "f"],
+            ["f", "w", "f", "n", "f", "n", "reaper", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "w", "f", "n", "f"],
             ["n", "n", "w", "n", "n", "n", "n", "n", "n", "n", "w", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "mountain", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "n", "n", "w", "n", "n", "n", "n", "n", "n", "n", "n"],
-            ["mouse", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "mouse"]
+            ["fighter", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "dancer"]
         ]
     ]
 }

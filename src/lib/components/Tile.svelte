@@ -1,9 +1,13 @@
 <script>
 	import stone from '$lib/assets/game/Walls/stone.svg';
 	import stonehorizontal from '$lib/assets/game/Walls/stonehorizontal.svg';
-	import wizard from '$lib/assets/game/Rats/fighter.svg';
 	import mountain from '$lib/assets/game/rock.svg';
 
+	// characters
+	import wizard from '$lib/assets/game/Rats/wizard.svg';
+	import fighter from '$lib/assets/game/Rats/fighter.svg';
+	import dancer from '$lib/assets/game/Rats/dancer.svg';
+	import mage from '$lib/assets/game/Rats/mage.svg';
 	import reaper from '$lib/assets/game/Rats/reaper.svg';
 
 	// provide the props of either "w", "f", or "n"
@@ -18,13 +22,25 @@
 		aria-label="game tile"
 		class="flex justify-center items-center border-solid border-[#c28149] border-2"
 	>
-		{#if piece === 'cat'}
+		{#if piece === 'reaper'}
 			<div class="h-[75%] w-[75%]">
-				<img src={reaper} alt="cat" />
+				<img src={reaper} alt="Grim Reaper" />
 			</div>
-		{:else if piece === 'mouse'}
+		{:else if piece === 'wizard'}
 			<div class="h-[75%] w-[75%] flex flex-col justify-center items-center">
 				<img src={wizard} alt="wizard rat" class="w-full" />
+			</div>
+		{:else if piece === 'fighter'}
+			<div class="h-[75%] w-[75%] flex flex-col justify-center items-center">
+				<img src={fighter} alt="fighter rat" class="w-full" />
+			</div>
+		{:else if piece === 'dancer'}
+			<div class="h-[75%] w-[75%] flex flex-col justify-center items-center">
+				<img src={dancer} alt="dancer rat" class="w-full" />
+			</div>
+		{:else if piece === 'mage'}
+			<div class="h-[75%] w-[75%] flex flex-col justify-center items-center">
+				<img src={mage} alt="mage rat" class="w-full" />
 			</div>
 		{:else if piece === 'mountain'}
 			<div class="h-[75%] w-[75%]">
