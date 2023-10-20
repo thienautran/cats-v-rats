@@ -13,8 +13,8 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
-// const boardRNG = getRandomInt(0, 6);
-const boardRNG = 0;
+const boardRNG = getRandomInt(0, 6);
+// const boardRNG = 0;
 
 export const gameInfo = writable({
     player1: 'player 1',

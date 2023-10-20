@@ -25,7 +25,7 @@
 
 	// lookups
 	const rows = { 0: 'A', 2: 'B', 4: 'C', 6: 'D', 8: 'E', 10: 'F', 12: 'G' };
-	const cols = { 0: '1', 2: '2', 4: '3', 6: '4', 8: '5', 10: '6', 12: '7' };
+	const cols = { 12: '1', 10: '2', 8: '3', 6: '4', 4: '5', 2: '6', 0: '7' };
 
 	// handles movement
 	let formValue = '';
@@ -185,6 +185,9 @@
 	function handleUserMovement() {
 		movePiece($gameInfo.currentActiveCoordinates, formValue);
 		turnHandler();
+		if ($gameInfo.aliveRats === []) {
+			stopGame();
+		}
 		// console.log(typeof formValue);
 	}
 
@@ -274,7 +277,7 @@
 				{/each}
 			</div>
 		</div>
-		<div>
+		<div class="flex flex-col justify-center items-center gap-4">
 			<h2>
 				It is currently {$gameInfo.currentPlayer}'s turn to move and we are on turn {$gameInfo.gameTurn}
 			</h2>
@@ -285,11 +288,13 @@
 					>Use Ratticus's ability, add 1 turn</button
 				>
 			{/if}
+
+			<h3>Select a move from the box below</h3>
 			<form
-				class="flex flex-col justify-center items-center gap-6"
+				class="flex flex-row justify-center items-center gap-2"
 				on:submit|preventDefault={handleUserMovement}
 			>
-				<select class="py-[2px] px-[2px]" name="moves" bind:value={formValue}>
+				<select class="py-2 px-6 text-black rounded-md text-xl" name="moves" bind:value={formValue}>
 					{#each possibleMoves as move}
 						<option value={move[1]}>{move[0]}</option>
 					{/each}

@@ -1,7 +1,7 @@
 {
     "boards": [
         [
-            ["wizard", "n", "reaper", "n", "f", "n", "f", "n", "f", "n", "f", "n", "fighter"],
+            ["wizard", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "fighter"],
             ["n", "n", "n", "n", "n", "n", "w", "n", "w", "n", "n", "n", "n"],
             ["f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f", "n", "f"],
             ["n", "n", "w", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n"],
